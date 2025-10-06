@@ -233,6 +233,9 @@ class PortKillerGUI:
         try:
             processes = find_processes_on_port(port)
             
+            # Reset Port Label
+            self.port_entry.delete(0, tk.END)
+
             if not processes:
                 self.status_label.config(text="")
                 messagebox.showinfo("Info", f"No processes are listening on port {port}.")
