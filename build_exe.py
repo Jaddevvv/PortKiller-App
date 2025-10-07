@@ -150,10 +150,7 @@ def main():
     
     if success:
         # Ask about cleanup
-        response = input("\nDo you want to clean up temporary build files? (y/n): ")
-        if response.lower().strip() in ['y', 'yes']:
-            cleanup_build_files()
-        
+        cleanup_build_files()
         print("\n✅ All done! Your executable is ready for distribution.")
     else:
         print("\n❌ Build process failed. Please check the errors above.")
